@@ -30,7 +30,7 @@ class Category:
             return f"{description}{' ' * space_multiplier}{amount}"
 
         def format_total(amount: str) -> str:
-            return f"Total: {amount} "
+            return f"Total: {amount}"
 
         result: str = f"{format_header(self.category_name)}\n"
         for entry in self.ledger:
@@ -120,8 +120,8 @@ def create_spend_chart(categories):
             ret_val += string_list[j][i]
         ret_val += "\n"
     # Given the nature of our list -> string conversion, we'll need to remove
-    # redundant trailing whitespace and add a single space.
-    return ret_val.rstrip() + " "
+    # redundant trailing whitespace and add a double space.
+    return ret_val.rstrip() + "  "
 
 
 def _calculate_category_withdraw(category: Category) -> float:

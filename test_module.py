@@ -86,7 +86,7 @@ class UnitTests(unittest.TestCase):
         self.food.transfer(20, self.entertainment)
         actual = str(self.food)
         expected = f"*************Food*************\ndeposit                 900.00\nmilk, cereal, eggs, " \
-                   f"bac -45.67\nTransfer to Entertainme -20.00\nTotal: 834.33 "
+                   f"bac -45.67\nTransfer to Entertainme -20.00\nTotal: 834.33"
         self.assertEqual(actual, expected, 'Expected different string representation of object.')
 
     def test_create_spend_chart(self):
@@ -101,7 +101,7 @@ class UnitTests(unittest.TestCase):
                    "60|    o     \n 50|    o     \n 40|    o     \n 30|    o     \n 20|    o  o  \n 10|    o  o  \n  " \
                    "0| o  o  o  \n    ----------\n     B  F  E  \n     u  o  n  \n     s  o  t  \n     i  d  e  \n    " \
                    " n     r  \n     e     t  \n     s     a  \n     s     i  \n           n  \n           m  \n      " \
-                   "     e  \n           n  \n           t "
+                   "     e  \n           n  \n           t  "
         self.assertEqual(actual, expected, 'Expected different chart representation. Check that all spacing is exact.')
 
 
